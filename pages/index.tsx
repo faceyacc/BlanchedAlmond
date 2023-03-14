@@ -3,6 +3,7 @@ import { Column } from '@/components/Column';
 import { AddNewItem } from '../components/AddNewItem';
 import { useAppState } from './api/state/AppStateContext';
 import { addList } from './api/state/actions';
+import { CustomDragLayer } from '@/components/CustomDragLayer';
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
   return (
 
       <AppContainer>
+        <CustomDragLayer/>
         {lists.map((list) => (
           <Column text={list.text} key={list.id} id={list.id}/>
         ))}
