@@ -12,7 +12,7 @@ export const Column = ({ text }: ColumnProps) => {
             <ColumnTitle>{text}</ColumnTitle>
             <Card text="Build BlanchedAlmond"/>
             <Card text="Eat salmon"/>
-            <Card text="Have a lot of sex!"/>
+            <Card text="Have a lot of ***!"/>
             <AddNewItem toggleButtonText='+ Add another todo' onAdd={() => console.log('hej hej')} />
         </ColumnContainer>
     )
