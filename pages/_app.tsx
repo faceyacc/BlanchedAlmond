@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 // 1. import `NextUIProvider` component
 import { NextUIProvider, createTheme, globalCss } from '@nextui-org/react';
 import { AppProps } from 'next/app';
+import { AppStateProvider } from './api/state/AppStateContext';
 
 
 const theme = createTheme({
@@ -25,7 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     // 2. Use at the root of your app
     <NextUIProvider theme={theme}>
+      <AppStateProvider>
       <Component {...pageProps} />
+      </AppStateProvider>
     </NextUIProvider>
   );
 }
