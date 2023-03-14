@@ -1,6 +1,7 @@
 import { Action } from "./actions"
 import { nanoid } from "nanoid"
-import { findItemIndexById } from "@/components/utils/arrayUtils"
+import { findItemIndexById, moveItem } from "@/components/utils/arrayUtils"
+import { DragItem } from "./DragItem"
 
 export type Task = {
     id: string
@@ -15,12 +16,14 @@ export type List = {
 
 export type AppState = {
     lists: List[]
+    draggedItem: DragItem | null
 }
 
 
 export const appStateReducer = (draft: AppState, action: Action): AppState | void => {
     switch(action.type) {
         case 'ADD_LIST': {
+            // Do Action to add column
             draft.lists.push({ // Update AppSate with new empty List
                 id: nanoid(),
                 text: action.payload,
@@ -29,13 +32,33 @@ export const appStateReducer = (draft: AppState, action: Action): AppState | voi
             break
         }
         case 'ADD_TASK': {
-            const { text, listId } = action.payload
+            const { text, listId } = action.payload 
             const targetListIndex = findItemIndexById(draft.lists, listId)
 
+            // Do Action to add card to column
             draft.lists[targetListIndex].tasks.push({ // Push taks to target list
                 id: nanoid(),
                 text
             })
+            break
+        }
+
+        case 'MOVE_LIST': {
+            const { draggedId, hoverId } = action.payload
+            const dragIndex = findItemIndexById(draft.lists, draggedId)
+            const hoverIndex = findItemIndexById(draft.lists, hoverId)
+
+            // Do Action to move list
+            draft.lists = moveItem(draft.lists, dragIndex, hoverIndex)
+            break
+        }
+
+        case 'SET_DRAGGED_ITEM': {
+            draft.draggedItem = action.payload
+            break 
+        }
+        default: {
+            break
         }
     }
 }

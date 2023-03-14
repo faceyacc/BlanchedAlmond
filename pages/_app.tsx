@@ -2,7 +2,9 @@ import '@/styles/globals.css'
 // 1. import `NextUIProvider` component
 import { NextUIProvider, createTheme, globalCss } from '@nextui-org/react';
 import { AppProps } from 'next/app';
+import { DndProvider } from 'react-dnd';
 import { AppStateProvider } from './api/state/AppStateContext';
+import { HTML5Backend as Backend } from 'react-dnd-html5-backend';
 
 
 const theme = createTheme({
@@ -26,9 +28,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     // 2. Use at the root of your app
     <NextUIProvider theme={theme}>
-      <AppStateProvider>
-      <Component {...pageProps} />
-      </AppStateProvider>
+      <DndProvider backend={Backend}>
+        <AppStateProvider>
+          <Component {...pageProps} />
+        </AppStateProvider>
+      </DndProvider>
     </NextUIProvider>
   );
 }
