@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> App that allows you to track trends in your music taste and sort your favorite tracks by danceability, energy, and tempo. 
+> A Simplistic light-weight Kanban Board to organize you busiest of days and declutter you thoughts and your schedule.. 
 
 ## Usage
 Run the following command in the root directory:
