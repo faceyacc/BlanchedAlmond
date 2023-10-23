@@ -5,13 +5,12 @@
 > A Simplistic light-weight Kanban Board to organize you busiest of days and declutter you thoughts and your schedule.. 
 
 ## Usage
-Run the following command in the root directory:
 
 ```sh
 npm start
 ```
 
-Once the app is running you can login with your Spotify account to track trends in your music and sort music by audio features (i.e. danceability, energy, and tempo).
+Once app is running you can start creating your own lists and tasks you want to complete. All data is automatically saved to `trello-backend`. 
 
 ## Demo
 
