@@ -1,38 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">BlanchedAlmond  - Zen Garden of the mind</h1>
+<p>
+</p>
 
-## Getting Started
+> App that allows you to track trends in your music taste and sort your favorite tracks by danceability, energy, and tempo. 
 
-First, run the development server:
+## Usage
+Run the following command in the root directory:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```sh
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once the app is running you can login with your Spotify account to track trends in your music and sort music by audio features (i.e. danceability, energy, and tempo).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Demo
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![](spotify.gif)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Author
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+👤 **Ty Facey**
 
-## Learn More
+* Website: https://tyfacey.dev
+* Github: [@faceyacc](https://github.com/faceyacc)
+* LinkedIn: [https:\/\/www.linkedin.com\/in\/ty-facey\/](https://www.linkedin.com/in/ty-facey/)
 
-To learn more about Next.js, take a look at the following resources:
+## Show your support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Give a ⭐️ if this project helped you!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
