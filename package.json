@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently next dev \"npm run client\"",
     "build": "next build",
-    "client": "cd trello-backend && yarn start",
+    "client": "cd blanchedalmond-backend && yarn start",
     "start": "next start",
     "lint": "next lint"
   },

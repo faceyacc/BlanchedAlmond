@@ -5,6 +5,7 @@ import { AppProps } from 'next/app';
 import { DndProvider } from 'react-dnd';
 import { AppStateProvider } from './api/state/AppStateContext';
 import { HTML5Backend as Backend } from 'react-dnd-html5-backend';
+import styled from 'styled-components';
 
 
 const theme = createTheme({
@@ -22,6 +23,11 @@ const globalStyles = globalCss({
   body: { backgroundColor: '#171717' }
 });
 
+const BlanchedAlmondHeader = styled.h1`
+  
+`
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
@@ -30,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NextUIProvider theme={theme}>
       <DndProvider backend={Backend}>
         <AppStateProvider>
+          <h1>[Blanched Almond]</h1>
           <Component {...pageProps} />
         </AppStateProvider>
       </DndProvider>
